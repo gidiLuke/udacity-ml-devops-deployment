@@ -9,4 +9,5 @@ dependencies:
   - scipy
   - matplotlib
   - scikit-learn
+  - python-multipart
 prefix: /Users/lh/miniconda3/envs/udacity-deployment
