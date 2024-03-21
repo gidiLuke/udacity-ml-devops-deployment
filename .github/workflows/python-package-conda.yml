@@ -29,3 +29,20 @@ jobs:
       run: |
         conda install pytest
         pytest
+
+  release-to-release-branch:
+    needs: build-linux
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        ref: 'main'
+    - name: Configure Git
+      run: |
+        git config user.name "GitHub Actions"
+        git config user.email "actions@github.com"
+    - name: Create and push to release branch
+      run: |
+        git checkout -b release || git checkout release
+        git merge --no-ff ${{ github.sha }} -m "Merge commit ${{ github.sha }} into release"
+        git push origin release
