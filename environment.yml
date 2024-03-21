@@ -11,4 +11,6 @@ dependencies:
   - scikit-learn
   - python-multipart
   - fastapi
+  - uvicorn
+  - gunicorn
 prefix: /Users/lh/miniconda3/envs/udacity-deployment
