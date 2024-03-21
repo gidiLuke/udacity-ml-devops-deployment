@@ -10,4 +10,5 @@ dependencies:
   - matplotlib
   - scikit-learn
   - python-multipart
+  - fastapi
 prefix: /Users/lh/miniconda3/envs/udacity-deployment
