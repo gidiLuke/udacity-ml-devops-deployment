@@ -13,4 +13,5 @@ dependencies:
   - fastapi
   - uvicorn
   - gunicorn
+  - httpx
 prefix: /Users/lh/miniconda3/envs/udacity-deployment
